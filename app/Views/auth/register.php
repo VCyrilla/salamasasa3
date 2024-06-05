@@ -36,13 +36,13 @@
                 </div>
                 <div class="form-group">
                     <label for="">Password</label>
-                    <input type="text" class="form-control" name="password" placeholder="Enter your password" value="<?= set_value ('password'); ?>">
+                    <input type="password" class="form-control" name="password" placeholder="Enter your password" value="<?= set_value ('password'); ?>">
                     <span class="text-danger"><?= isset($validation) ? display_error($validation, 'password') : '' ?></span>
 
                 </div>
                 <div class="form-group">
                     <label for="">Confirm Password</label>
-                    <input type="text" class="form-control" name="cpassword" placeholder="Confirm password" value="<?= set_value ('cpassword'); ?>">
+                    <input type="password" class="form-control" name="cpassword" placeholder="Confirm password" value="<?= set_value ('cpassword'); ?>">
                     <span class="text-danger"><?= isset($validation) ? display_error($validation, 'cpassword') : '' ?></span>
 
                 </div>
