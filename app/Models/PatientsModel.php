@@ -8,5 +8,5 @@ class PatientsModel extends Model
 {
     protected $table = 'patients';
     protected $primaryKey = 'patientID';
-    protected $allowedFields = ['name','email','password','DOB', 'gender'];
+    protected $allowedFields = ['name','email','password','DOB', 'gender', 'verify_token', 'created_at'];
 }

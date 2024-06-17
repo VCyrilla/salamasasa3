@@ -11,6 +11,13 @@
 <div class="container">
     <div class="row" style="margin-top:45px">
         <div class= "col-md-4 col-md-offset-4">
+    <?php
+    if(isset($_SESSION['status']))
+    {
+         echo "<h4>".$_SESSION['status']."</h4>";
+        unset($_SESSION['status']);
+    }
+    ?>
             <h4>Register</h4> <hr>
 
             <form action="<?= base_url('auth/save'); ?>" method="post">

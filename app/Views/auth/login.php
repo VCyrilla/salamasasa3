@@ -11,6 +11,17 @@
 <div class="container">
     <div class="row" style="margin-top:45px">
         <div class= "col-md-4 col-md-offset-4">
+        <?php
+if(session()->has('status'))
+{
+    ?>
+    <div class="alert alert-success">
+        <h5><?= session()->getFlashdata('status'); ?></h5>
+    </div>
+    <?php 
+}
+?>
+
             <h4>Log in</h4> <hr>
             <form action="<?= base_url('auth/check') ?>"method="post">
             <?= csrf_field(); ?>

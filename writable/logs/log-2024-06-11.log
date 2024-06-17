@@ -1,0 +1,111 @@
+INFO - 2024-06-11 09:21:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 09:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 09:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 09:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 09:22:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-11 09:24:11 --> Error: Call to undefined function App\Controllers\sendemail_verify()
+[Method: POST, Route: auth/save]
+in APPPATH\Controllers\Auth.php on line 120.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->save()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp2\\htdocs\\codeigniter\\codeigniter4\\codeigniter4-framework-9b2cd73\\public\\index.php')
+INFO - 2024-06-11 09:40:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 09:40:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-11 09:41:14 --> PHPMailer\PHPMailer\Exception: SMTP Error: Could not authenticate.
+[Method: POST, Route: auth/save]
+in VENDORPATH\phpmailer\phpmailer\src\PHPMailer.php on line 2265.
+ 1 VENDORPATH\phpmailer\phpmailer\src\PHPMailer.php(2062): PHPMailer\PHPMailer\PHPMailer->smtpConnect([])
+ 2 VENDORPATH\phpmailer\phpmailer\src\PHPMailer.php(1689): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Tue, 11 Jun 2024 09:41:11 +0000
+To: vanessa.cyrilla@strathmore.edu
+From: Vanessa Cyrilla <cyrilla.vanessa@gmail.com>
+Subject: Email Verification from Salama Sasa
+Message-ID: <uzb2XkxFv5CGJLYKt3gfSEtgkvKPF3H5sqbUlFUUwnU@localhost>
+X-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=iso-8859-1
+
+', '
+        <h2>You have Registered with Salama Sasa</h2>
+        <h5>Verify your email address to Login with the below given link</h5>
+        <br/><br/>
+        <a href= \'http://localhost:8080/auth/register?token=946a2f5ed5f3171502eebe32f1e6e10a\'> Click Me</a>
+        
+')
+ 3 VENDORPATH\phpmailer\phpmailer\src\PHPMailer.php(1523): PHPMailer\PHPMailer\PHPMailer->postSend()
+ 4 APPPATH\Controllers\Auth.php(53): PHPMailer\PHPMailer\PHPMailer->send()
+ 5 APPPATH\Controllers\Auth.php(120): App\Controllers\Auth->sendemail_verify('Vanessa Cyrilla', 'vanessa.cyrilla@strathmore.edu', '946a2f5ed5f3171502eebe32f1e6e10a')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->save()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp2\\htdocs\\codeigniter\\codeigniter4\\codeigniter4-framework-9b2cd73\\public\\index.php')
+INFO - 2024-06-11 09:42:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-11 09:43:11 --> PHPMailer\PHPMailer\Exception: SMTP Error: Could not authenticate.
+[Method: POST, Route: auth/save]
+in VENDORPATH\phpmailer\phpmailer\src\PHPMailer.php on line 2265.
+ 1 VENDORPATH\phpmailer\phpmailer\src\PHPMailer.php(2062): PHPMailer\PHPMailer\PHPMailer->smtpConnect([])
+ 2 VENDORPATH\phpmailer\phpmailer\src\PHPMailer.php(1689): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Tue, 11 Jun 2024 09:43:08 +0000
+To: cyrilla.vanessa@gmail.com
+From: Vanessa Cyrilla <cyrilla.vanessa@gmail.com>
+Subject: Email Verification from Salama Sasa
+Message-ID: <3sBcISUhjROXTqMGQuv0u0djB3Qht5dTslFKnPtF2s0@localhost>
+X-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=iso-8859-1
+
+', '
+        <h2>You have Registered with Salama Sasa</h2>
+        <h5>Verify your email address to Login with the below given link</h5>
+        <br/><br/>
+        <a href= \'http://localhost:8080/auth/register?token=431f3b82c242acf1b0b031759efe415a\'> Click Me</a>
+        
+')
+ 3 VENDORPATH\phpmailer\phpmailer\src\PHPMailer.php(1523): PHPMailer\PHPMailer\PHPMailer->postSend()
+ 4 APPPATH\Controllers\Auth.php(53): PHPMailer\PHPMailer\PHPMailer->send()
+ 5 APPPATH\Controllers\Auth.php(120): App\Controllers\Auth->sendemail_verify('Vanessa Cyrilla', 'cyrilla.vanessa@gmail.com', '431f3b82c242acf1b0b031759efe415a')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->save()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp2\\htdocs\\codeigniter\\codeigniter4\\codeigniter4-framework-9b2cd73\\public\\index.php')
+INFO - 2024-06-11 09:48:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 09:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 09:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-11 09:49:52 --> PHPMailer\PHPMailer\Exception: SMTP Error: Could not authenticate.
+[Method: POST, Route: auth/save]
+in VENDORPATH\phpmailer\phpmailer\src\PHPMailer.php on line 2265.
+ 1 VENDORPATH\phpmailer\phpmailer\src\PHPMailer.php(2062): PHPMailer\PHPMailer\PHPMailer->smtpConnect([])
+ 2 VENDORPATH\phpmailer\phpmailer\src\PHPMailer.php(1689): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Tue, 11 Jun 2024 09:49:49 +0000
+To: vanessa.cyrilla@strathmore.edu
+From: Vanessa Cyrilla <vanessa.cyrilla@strathmore.edu>
+Subject: Email Verification from Salama Sasa
+Message-ID: <M5Ch7kiWHOIuguBD8SHeUIUOe5zeQBS13XH4eUmmj7Q@localhost>
+X-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=iso-8859-1
+
+', '
+        <h2>You have Registered with Salama Sasa</h2>
+        <h5>Verify your email address to Login with the below given link</h5>
+        <br/><br/>
+        <a href= \'http://localhost:8080/auth/register?token=d3c03ce32833e500d8a065536c397b79\'> Click Me</a>
+        
+')
+ 3 VENDORPATH\phpmailer\phpmailer\src\PHPMailer.php(1523): PHPMailer\PHPMailer\PHPMailer->postSend()
+ 4 APPPATH\Controllers\Auth.php(53): PHPMailer\PHPMailer\PHPMailer->send()
+ 5 APPPATH\Controllers\Auth.php(120): App\Controllers\Auth->sendemail_verify('Vanessa Cyrilla', 'vanessa.cyrilla@strathmore.edu', 'd3c03ce32833e500d8a065536c397b79')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->save()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp2\\htdocs\\codeigniter\\codeigniter4\\codeigniter4-framework-9b2cd73\\public\\index.php')
