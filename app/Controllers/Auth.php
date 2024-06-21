@@ -28,7 +28,7 @@ class Auth extends Controller
     public function verifyemail()
 {
     $db = \Config\Database::connect();
-    $builder = $db->table('patients');
+    $builder = $db->table('users');
 
     if($this->request->getGet('token'))
     {
@@ -130,7 +130,7 @@ class Auth extends Controller
                 ]
                 ],
                 'email'=>[
-                    'rules'=>'required|valid_email|is_unique[patients.email]',
+                    'rules'=>'required|valid_email|is_unique[users.email]',
                     'errors'=>[
                         'required'=>'Email is required',
                         'valid_email'=>'You must enter a valid email',
@@ -170,8 +170,8 @@ class Auth extends Controller
                 'verify_token'=>$verify_token
             ];
 
-            $patientsModel = new \App\Models\PatientsModel();
-            $query = $patientsModel->insert($values);
+            $usersModel = new \App\Models\UsersModel();
+            $query = $usersModel->insert($values);
             if(!$query){
                 return redirect()->back()->with('fail', 'Something went wrong');
                 //return redirect()->to('register')->with('fail', 'Something went wrong')
@@ -188,7 +188,7 @@ class Auth extends Controller
 
             $validation = $this->validate([
                 'email'=>[
-                    'rules'=>'required|valid_email|is_not_unique[patients.email]',
+                    'rules'=>'required|valid_email|is_not_unique[users.email]',
                     'errors'=>[
                         'required'=>'Email is required',
                         'valid_email'=>'Enter a valid email address',
@@ -211,23 +211,23 @@ class Auth extends Controller
                
                 $email = $this->request->getPost('email');
                 $password = $this->request->getPost('password');
-                $patientsModel = new \App\Models\PatientsModel();
-                $patient_info = $patientsModel-> where('email', $email)->first();
-                if ($password != $patient_info['password']) 
+                $usersModel = new \App\Models\UsersModel();
+                $user_info = $usersModel-> where('email', $email)->first();
+                if ($password != $user_info['password']) 
                 {
                     session()->setFlashdata('fail', 'Incorrect password');
                     return redirect()->to('/auth')->withInput();
                 }else{
-                    $patient_id = $patient_info['patientID'];
-                    session()->set('loggedPatient', $patient_id);
+                    $user_id = $user_info['userID'];
+                    session()->set('loggedUser', $user_id);
                     return redirect()->to('/dashboard');
                  
                } 
             }
          }
        function logout(){
-        if(session()->has('loggedPatient')){
-            session()->remove('loggedPatient');
+        if(session()->has('loggedUser')){
+            session()->remove('loggedUser');
             return redirect()->to('/auth?access=out')->with('fail', 'You are logged out!');
         }
        }

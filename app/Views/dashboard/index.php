@@ -20,8 +20,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><?= ucfirst($patientInfo['name']);?></td>
-                            <td><?= $patientInfo['email'];?></td>
+                            <td><?= ucfirst($userInfo['name']);?></td>
+                            <td><?= $userInfo['email'];?></td>
                             <td><a href="<?= site_url('auth/logout'); ?>">Logout</a></td>
 
                         </tr>

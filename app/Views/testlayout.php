@@ -73,7 +73,7 @@
           <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
           <li class="dropdown"><a href="#"><span>Sign in</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Patient</a></li>
+              <li><a href="#">User</a></li>
               <li><a href="#">Doctor</a></li>
               <li><a href="#">Admin</a></li>
             </ul>

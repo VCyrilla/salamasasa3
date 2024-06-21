@@ -44,7 +44,7 @@ Main connection [MySQLi]: No connection could be made because the target machine
 in SYSTEMPATH\Database\BaseConnection.php on line 457.
  1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
  2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT 1
-FROM `patients`
+FROM `users`
 WHERE `email` = :email:
  LIMIT 1', [...], false)
  3 SYSTEMPATH\Validation\StrictRules\Rules.php(228): CodeIgniter\Database\BaseBuilder->get()
