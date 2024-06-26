@@ -13,6 +13,13 @@ class Dashboard extends BaseController
             'title' => 'Dashboard',
             'userInfo'=> $userInfo
         ];
-        return view('dashboard/index', $data);
+        if ($userInfo['role'] == 'admin') {
+            return view('dashboard/admin', $data);
+        } elseif ($userInfo['role'] == 'patient') {
+            return view('dashboard/patient', $data);
+        } elseif ($userInfo['role'] == 'doctor') {
+            return view('dashboard/doctor', $data);
+       // return view('dashboard/index', $data);
     } 
+}
 }

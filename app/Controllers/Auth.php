@@ -167,6 +167,7 @@ class Auth extends Controller
                 'name'=> $name,
                 'email'=>$email,
                 'password'=>$password,
+                'role'=>'patient',
                 'verify_token'=>$verify_token
             ];
 

@@ -16,3 +16,11 @@ $routes->post('/auth/check','Auth::check');
 $routes->get('/dashboard', 'Dashboard::index');
 $routes->get('//auth/logout','Auth::logout');
 $routes->get('/auth/verifyemail', 'Auth::verifyemail');
+
+//CRUD Doctor's data
+$routes->get('doctor', 'DoctorController::index');
+$routes->get('doctor-add', 'DoctorController::create');
+$routes->post('doctor-store', 'DoctorController::store');
+$routes->get('doctor/edit/(:num)', 'DoctorController::edit/$1');
+$routes->post('doctor/update/(:num)', 'DoctorController::update/$1');
+$routes->get('doctor/delete/(:num)', 'DoctorController::delete/$1');
